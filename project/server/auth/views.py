@@ -38,7 +38,7 @@ class RegisterAPI(MethodView):
                 responseObject = {
                     'status': 'success',
                     'message': 'Successfully registered.',
-                    'auth_token': auth_token.decode()
+                    'auth_token': auth_token
                 }
                 return make_response(jsonify(responseObject)), 201
             except Exception as e:
@@ -64,3 +64,4 @@ auth_blueprint.add_url_rule(
     view_func=registration_view,
     methods=['POST', 'GET']
 )
+

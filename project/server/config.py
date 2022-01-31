@@ -1,4 +1,5 @@
 import os
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 postgres_local_base = 'sqlite:///'
 database_name = 'diagnostic'
@@ -10,6 +11,7 @@ class BaseConfig:
     DEBUG = False
     BCRYPT_LOG_ROUNDS = 13
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    WTF_CSRF_ENABLED = False
 
 
 class DevelopmentConfig(BaseConfig):
@@ -33,3 +35,4 @@ class ProductionConfig(BaseConfig):
     SECRET_KEY = 'diagnostic_secret'
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = 'sqlite:///diagnostic'
+   

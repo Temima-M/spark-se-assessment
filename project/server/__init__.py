@@ -19,6 +19,7 @@ from flask import Flask
 from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -68,3 +69,15 @@ def test(coverage):
             COV.erase()
         return 0
     return 1
+    
+@app.route('/users/index', methods=['GET'])
+def get_all_users(): 
+ 
+   users = User.query.all()
+   result = []  
+   for user in users:  
+       user_data = {}  
+       user_data['email'] = user.email
+     
+       result.append(user_data)  
+   return jsonify({'users': result})
