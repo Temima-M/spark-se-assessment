@@ -1,4 +1,4 @@
-web: gunicorn user:server
+web: gunicorn User:server
 heroku ps:scale web=1
 
 
