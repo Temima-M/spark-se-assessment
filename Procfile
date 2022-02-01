@@ -1,4 +1,4 @@
-web: gunicorn app:app
+web: gunicorn flask:app
 heroku ps:scale web=1
 
 
