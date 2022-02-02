@@ -1,3 +1,2 @@
-web: gunicorn project.server.__init__:app
+web: bash launch.sh
 heroku ps:scale web=1
-release: bash launch.sh db upgrade
