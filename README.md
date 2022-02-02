@@ -1,5 +1,7 @@
 # Flask JWT Auth
 
+My site deployed on Heroku  https://muskinnspark-se-assessment.herokuapp.com
+
 ## Quick Start
 
 ### Basics
@@ -44,3 +46,4 @@ So access the application at the address [http://localhost:5000/](http://localho
 > ```sh
 > $ flask run --host=0.0.0.0 --port=5000
 > ```
+
